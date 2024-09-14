@@ -1,0 +1,41 @@
+set nocompatible
+set mouse=a
+
+syntax on
+set t_Co=256
+set laststatus=2
+set modeline
+set modelines=10
+
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
+
+set number
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+set visualbell
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+set autoindent
+set expandtab
+set shiftwidth=4
+set smartindent
+set smarttab
+set softtabstop=4
+set tabstop=4
+
+set ruler
+
+set undolevels=1000
+set backspace=indent,eol,start
+
