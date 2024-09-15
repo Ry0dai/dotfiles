@@ -122,26 +122,15 @@ config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "d", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "d", mods = "CMD|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "LeftArrow", mods = "CMD|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "RightArrow", mods = "CMD|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
+	{ key = "UpArrow", mods = "CMD|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
+	{ key = "DownArrow", mods = "CMD|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
 	{ key = "+", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
 	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
 	{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
-	-- Sends ESC + b and ESC + f sequence, which is used
-	-- for telling your shell to jump back/forward.
-	{
-		-- When the left arrow is pressed
-		key = "LeftArrow",
-		-- With the "Option" key modifier held down
-		mods = "OPT",
-		-- Perform this action, in this case - sending ESC + B
-		-- to the terminal
-		action = wezterm.action.SendString("\x1bb"),
-	},
-	{
-		key = "RightArrow",
-		mods = "OPT",
-		action = wezterm.action.SendString("\x1bf"),
-	},
-
+	{ key = "w", mods = "CMD", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
+	{ key = "x", mods = "CMD", action = wezterm.action.CloseCurrentPane({ confirm = false }) },
 	{
 		key = ",",
 		mods = "SUPER",
