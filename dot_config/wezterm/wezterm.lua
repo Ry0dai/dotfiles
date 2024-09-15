@@ -122,6 +122,9 @@ config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "d", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "d", mods = "CMD|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "+", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
+	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
+	{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
 	-- Sends ESC + b and ESC + f sequence, which is used
 	-- for telling your shell to jump back/forward.
 	{
